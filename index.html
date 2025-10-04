@@ -1,15 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mi sitio</title>
-  <meta name="description" content="Mi web en GitHub Pages">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mateo Carpio · Sitio personal</title>
+  <meta name="description" content="Proyectos, publicaciones y contacto.">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <main style="max-width:680px;margin:40px auto;font-family:system-ui,Arial,sans-serif;line-height:1.5">
-    <h1>¡Hola!</h1>
-    <p>Esta es mi página en GitHub Pages.</p>
+  <main>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/about.html">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#publicaciones">Publicaciones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <h1>David Mateo Carpio Rivas</h1>
+    <p>Investigación en sistemas complejos, redes y sociolingüística computacional.</p>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="card">
+        <strong>Lengua y redes en X/Twitter (2015–2021)</strong><br>
+        Análisis de homofilia lingüística y rasgos no estándar en comunidades online.
+        <div><a href="https://github.com/mateocarpio" target="_blank" rel="noopener">Repo</a></div>
+      </div>
+    </section>
+
+    <section id="publicaciones">
+      <h2>Publicaciones</h2>
+      <ul>
+        <li>Título · Revista/Año · <a href="#">PDF</a></li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p><a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a> · <a href="https://scholar.google.com/">Google Scholar</a> · <a href="https://www.linkedin.com/">LinkedIn</a></p>
+    </section>
+
+    <footer>© <span id="y"></span> Mateo Carpio</footer>
   </main>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
