@@ -3,46 +3,178 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mateo Carpio · Sitio personal</title>
-  <meta name="description" content="Proyectos, publicaciones y contacto.">
-  <link rel="stylesheet" href="assets/style.css">
+  <title>David Mateo Carpio Rivas · Sitio personal</title>
+  <meta name="description" content="Investigación en sistemas complejos, redes y sociolingüística computacional. Proyectos, publicaciones y contacto.">
+  <meta property="og:title" content="David Mateo Carpio Rivas · Sitio personal">
+  <meta property="og:description" content="Investigación en sistemas complejos, redes y sociolingüística computacional. Proyectos, publicaciones y contacto.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mateocarpio.github.io/">
+  <link rel="icon" href="assets/favicon.ico">
+
+  <style>
+    /* ===== Estilos básicos (todo en un archivo) ===== */
+    :root{
+      --maxw: 920px;
+      --radius: 16px;
+      --shadow: 0 6px 18px rgba(0,0,0,.06);
+      --bg: #ffffff; --fg: #111; --muted: #666; --line:#eee; --brand:#0a7cff;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b0d10; --fg:#e9eef4; --muted:#a8b3c0; --line:#1c2430; --brand:#6aa9ff; }
+      img{ filter: brightness(.95) contrast(1.05); }
+    }
+    *{ box-sizing: border-box }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif }
+    a{ color:var(--brand); text-decoration: none }
+    a:hover{ text-decoration: underline }
+    main{ max-width: var(--maxw); margin: 0 auto; padding: 24px 20px 64px }
+
+    /* Navegación */
+    .nav{ display:flex; gap:14px; align-items:center; justify-content:space-between; padding:16px 0; position: sticky; top:0; background:var(--bg); z-index:10 }
+    .nav__left{ display:flex; gap:14px; align-items:center }
+    .nav__brand{ font-weight:700 }
+    .nav a{ padding:6px 10px; border-radius:10px }
+    .nav a:hover{ background: var(--line) }
+
+    /* Hero */
+    .hero{ display:grid; grid-template-columns: 150px 1fr; gap:20px; padding:18px; border:1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); margin: 12px 0 28px }
+    .hero img{ width:150px; height:150px; border-radius: 50%; object-fit: cover; border:1px solid var(--line) }
+    .hero h1{ margin:0 0 6px; font-size: clamp(1.4rem, 2.4vw + .6rem, 2.2rem) }
+    .hero p{ margin:.2rem 0; color:var(--muted) }
+    .hero .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px }
+    .chip{ border:1px solid var(--line); padding:6px 10px; border-radius:999px; font-size:.9rem }
+
+    /* Secciones */
+    section{ margin: 38px 0 }
+    h2{ font-size: 1.4rem; margin: 0 0 12px }
+
+    .grid{ display:grid; gap:14px }
+    @media (min-width: 780px){ .grid{ grid-template-columns: 1fr 1fr } }
+
+    .card{ border:1px solid var(--line); border-radius: var(--radius); padding:16px; box-shadow: var(--shadow); background:var(--bg) }
+    .card h3{ margin:.2rem 0 .2rem; font-size:1.1rem }
+    .meta{ color:var(--muted); font-size:.95rem }
+
+    /* Pie */
+    footer{ margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color:var(--muted); font-size:.95rem }
+
+    /* Utilidades */
+    .btn{ display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid var(--line); box-shadow: var(--shadow) }
+    .btn:hover{ text-decoration:none; background: var(--line) }
+    .right{ text-align:right }
+  </style>
 </head>
 <body>
   <main>
-    <nav>
-      <a href="/">Inicio</a>
-      <a href="/about.html">Sobre mí</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#publicaciones">Publicaciones</a>
-      <a href="#contacto">Contacto</a>
+    <!-- ===== NAV ===== -->
+    <nav class="nav">
+      <div class="nav__left">
+        <span class="nav__brand">Mateo Carpio</span>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#investigacion">Investigación</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#publicaciones">Publicaciones</a>
+        <a href="#docencia">Docencia</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="right">
+        <a class="btn" href="CV_MateoCarpio.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
     </nav>
 
-    <h1>David Mateo Carpio Rivas</h1>
-    <p>Investigación en sistemas complejos, redes y sociolingüística computacional.</p>
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+      <!-- Reemplaza src por tu foto en /assets/img/perfil.jpg -->
+      <img src="assets/img/perfil.jpg" alt="Foto de perfil">
+      <div>
+        <h1>David Mateo Carpio Rivas</h1>
+        <p>Investigación en sistemas complejos, redes y sociolingüística computacional.</p>
+        <p class="meta">Bordeaux · Palma · Quito · Español / Inglés / Francés</p>
+        <div class="chips">
+          <span class="chip">Sistemas Complejos</span>
+          <span class="chip">Redes</span>
+          <span class="chip">Sociolingüística</span>
+          <span class="chip">Optimización</span>
+        </div>
+      </div>
+    </header>
 
-    <section id="proyectos">
-      <h2>Proyectos</h2>
-      <div class="card">
-        <strong>Lengua y redes en X/Twitter (2015–2021)</strong><br>
-        Análisis de homofilia lingüística y rasgos no estándar en comunidades online.
-        <div><a href="https://github.com/mateocarpio" target="_blank" rel="noopener">Repo</a></div>
+    <!-- ===== SOBRE MÍ ===== -->
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy investigador en física de sistemas complejos y ciencia de datos. Estudio cómo las interacciones sociales mediadas por redes influyen en el uso de la lengua y en la aparición de rasgos lingüísticos no estándar. Me interesan los métodos cuantitativos, el modelado y los algoritmos eficientes.
+      </p>
+    </section>
+
+    <!-- ===== LÍNEAS DE INVESTIGACIÓN ===== -->
+    <section id="investigacion">
+      <h2>Investigación</h2>
+      <div class="grid">
+        <div class="card"><h3>Lengua y comunidades online</h3><p class="meta">Homofilia, adaptación, segregación espacial</p><p>Redes de interacción (Twitter/X), asignación de lengua, medidas de homofilia y análisis de rasgos no estándar.</p></div>
+        <div class="card"><h3>Modelos en redes</h3><p class="meta">Dinámica de opiniones, juegos evolutivos</p><p>Voter/AXELROD, procesos de Moran, coevolución estructura-estado y null models.</p></div>
       </div>
     </section>
 
+    <!-- ===== PROYECTOS ===== -->
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Lengua y redes en X/Twitter (2015–2021)</h3>
+          <p class="meta">Código · Datos · Figuras</p>
+          <p>Construcción de red de respuestas (≈1.1M usuarios UK). Análisis de comunidades (OSLOM) y patrones de uso de lenguas minoritarias.</p>
+          <p><a href="https://github.com/mateocarpio" target="_blank" rel="noopener">Repositorio</a></p>
+        </article>
+        <article class="card">
+          <h3>Optimización y aprendizaje</h3>
+          <p class="meta">Min–max débilmente convexo / fuertemente cóncavo</p>
+          <p>Esquemas proximales y gradiente para problemas con garantías de convergencia bajo condiciones de suavidad.</p>
+          <p><a href="#" target="_blank" rel="noopener">Notas técnicas</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PUBLICACIONES ===== -->
     <section id="publicaciones">
       <h2>Publicaciones</h2>
+      <ol>
+        <li>
+          Autor, A.; <strong>Carpio, M.</strong>; Autor, B. <em>Título del trabajo</em>, Revista, Año. 
+          <a href="#" target="_blank" rel="noopener">PDF</a> · <a href="#" target="_blank" rel="noopener">DOI</a>
+        </li>
+        <li>
+          <strong>Carpio, M.</strong>; Autor, C. <em>Otro título</em>, Conferencia, Año. 
+          <a href="#" target="_blank" rel="noopener">Slides</a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== DOCENCIA ===== -->
+    <section id="docencia">
+      <h2>Docencia</h2>
       <ul>
-        <li>Título · Revista/Año · <a href="#">PDF</a></li>
+        <li>Business Calculus (tutoría). Materiales y ejercicios — <a href="#">apuntes</a>.</li>
+        <li>Introducción a modelos en redes. Prácticas con NetworkX — <a href="#">código</a>.</li>
       </ul>
     </section>
 
+    <!-- ===== CONTACTO ===== -->
     <section id="contacto">
       <h2>Contacto</h2>
-      <p><a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a> · <a href="https://scholar.google.com/">Google Scholar</a> · <a href="https://www.linkedin.com/">LinkedIn</a></p>
+      <p>
+        <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a> · 
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a> · 
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a> · 
+        <a href="https://github.com/mateocarpio" target="_blank" rel="noopener">GitHub</a>
+      </p>
     </section>
 
-    <footer>© <span id="y"></span> Mateo Carpio</footer>
+    <footer>
+      © <span id="y"></span> Mateo Carpio · Hecho con GitHub Pages
+    </footer>
   </main>
+
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
