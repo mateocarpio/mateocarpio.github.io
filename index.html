@@ -14,9 +14,7 @@
   <style>
     /* ===== Base styles (single-file) ===== */
     :root{
-      --maxw: 920px;
-      --radius: 16px;
-      --shadow: 0 6px 18px rgba(0,0,0,.06);
+      --maxw: 920px; --radius: 16px; --shadow: 0 6px 18px rgba(0,0,0,.06);
       --bg: #ffffff; --fg: #111; --muted: #666; --line:#eee; --brand:#0a7cff;
     }
     @media (prefers-color-scheme: dark){
@@ -73,6 +71,7 @@
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
         <a href="#publications">Publications</a>
         <a href="#teaching">Teaching</a>
         <a href="#contact">Contact</a>
@@ -84,17 +83,16 @@
 
     <!-- ===== HERO ===== -->
     <header class="hero">
-      <!-- Replace src with your photo at /assets/img/perfil.jpg -->
+      <!-- Replace src with your photo at /assets/img/profile.webp -->
       <img src="assets/img/foto_perfil.webp" alt="Profile photo">
       <div>
         <h1>David Mateo Carpio Rivas</h1>
         <p>Research in complex systems, networks, and computational sociolinguistics.</p>
-        <p class="meta"> Palma · Quito · Spanish / English </p>
+        <p class="meta">Palma, Spain · Azogues, Ecuador · Spanish / English</p>
         <div class="chips">
           <span class="chip">Complex Systems</span>
           <span class="chip">Networks</span>
           <span class="chip">Sociolinguistics</span>
-
         </div>
       </div>
     </header>
@@ -135,17 +133,32 @@
       </div>
     </section>
 
+    <!-- ===== EDUCATION ===== -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>M.Sc. in Physics of Complex Systems</h3>
+          <p class="meta">IFISC (UIB–CSIC), Palma, Spain — 2024–2025 · Final grade: 9.25/10</p>
+          <p>Electives: Computational Social Sciences; Complex Systems Modelling in Economics; Applied Data Analysis & Machine Learning; Ecology & Population Dynamics.</p>
+        </div>
+        <div class="card">
+          <h3>B.Sc. in Physics (5-year degree)</h3>
+          <p class="meta">Yachay Tech University, Ecuador — 2018–2023 · Final grade: 9.6/10 (magna cum laude)</p>
+          <p>Relevant courses: Complex Systems; Dynamical Systems; Computational Physics I & II; Statistical Physics; Classical Mechanics.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== PUBLICATIONS ===== -->
     <section id="publications">
       <h2>Publications</h2>
       <ol>
         <li>
-          Author, A.; <strong>Carpio, M.</strong>; Author, B. <em>Title of the work</em>, Journal, Year. 
-          <a href="#" target="_blank" rel="noopener">PDF</a> · <a href="#" target="_blank" rel="noopener">DOI</a>
+          D. M. Carpio. <em>How interactions and connectivity in social media networks mediate language use</em>. M.Sc. thesis, Universitat de les Illes Balears, 2025. Dissertation grade: 9.7/10.
         </li>
         <li>
-          <strong>Carpio, M.</strong>; Author, C. <em>Another title</em>, Conference, Year. 
-          <a href="#" target="_blank" rel="noopener">Slides</a>
+          D. M. Carpio. <em>The complexity of polarization in social dynamics</em>. B.Sc. thesis, Yachay Tech University, 2023. Dissertation grade: 10/10.
         </li>
       </ol>
     </section>
@@ -154,8 +167,7 @@
     <section id="teaching">
       <h2>Teaching</h2>
       <ul>
-        <li> Physics II. Practice (Problem-Solving Session)
-        <!-- <li>Introduction to network models. Practicals with NetworkX — <a href="#">code</a>.</li> -->
+        <li>Physics II — Practice (Problem-Solving Session)</li>
       </ul>
     </section>
 
@@ -164,7 +176,6 @@
       <h2>Contact</h2>
       <p>
         <a href="mailto:mateocarpiorivas@gmail.com">mateocarpiorivas@gmail.com</a> · 
-        <!-- <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a> ·  -->
         <a href="https://www.linkedin.com/in/mateo-carpio-rivas/" target="_blank" rel="noopener">LinkedIn</a> · 
         <a href="https://github.com/mateocarpio" target="_blank" rel="noopener">GitHub</a>
       </p>
